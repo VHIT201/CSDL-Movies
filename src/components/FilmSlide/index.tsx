@@ -100,7 +100,7 @@ const FilmSlide: React.FC<FilmSlideProps> = ({
 
           <div className="hidden px-4 lg:block lg:w-1/3 ">
             <img
-              className="w-96 rounded-3xl animated hidden poster"
+              className="w-96 rounded-lg animated hidden poster"
               src={posterSrc}
               alt="Poster"
               style={{ objectFit: "cover" }}

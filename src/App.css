@@ -66,7 +66,7 @@ body {
 
 
 .shadow-btn {
-  --tw-shadow: 0 0 7px 8px rgba(255, 0, 0, 0.4);
+  --tw-shadow: 0 0 7px 8px rgba(229, 9, 20, 0.4);
   --tw-shadow-colored: 0 0 7px 8px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -198,7 +198,7 @@ body {
 }
 .after\:rounded-3xl:after {
   content: var(--tw-content);
-  border-radius: 1.5rem;
+  border-radius: 0.5rem;
 }
 .after\:bg-gradient-to-t:after {
   content: var(--tw-content);
@@ -245,10 +245,10 @@ body {
 }
 .hover\:text-red-main:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(229 9 20 / var(--tw-text-opacity));
 }
 .hover\:shadow-btn-hover:hover {
-  --tw-shadow: 0 0 12px 14px rgba(255, 0, 0, 0.4);
+  --tw-shadow: 0 0 12px 14px rgba(229, 9, 20, 0.4);
   --tw-shadow-colored: 0 0 12px 14px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),
     var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -267,7 +267,7 @@ body {
 .group\/container:hover .group-hover\/container\:text-red-main,
 .group:hover .group-hover\:text-red-main {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity));
+  color: rgb(229 9 20 / var(--tw-text-opacity));
 }
 .group\/poster:hover .group-hover\/poster\:opacity-100 {
   opacity: 1;
@@ -286,7 +286,7 @@ body {
 
 .footer-item:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity))
+  color: rgb(229 9 20 / var(--tw-text-opacity))
 }
 
 @media (min-width: 768px) {
@@ -330,18 +330,18 @@ body {
   height: .125rem;
   width: 0px;
   transform: translateX(-50%);
-  background-color: rgba(255, 0, 0, 1);
+  background-color: rgba(229, 9, 20, 1);
   content: "";
 }
 
 .nav-item.active:after {
   width: 100%; 
-  color: rgb(255 0 0 / var(--tw-text-opacity))
+  color: rgb(229 9 20 / var(--tw-text-opacity))
 }
 
 .nav-item:hover {
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity))
+  color: rgb(229 9 20 / var(--tw-text-opacity))
 }
 
 .nav-item:hover:after {
@@ -376,7 +376,7 @@ body {
 
 .bg-red-main {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity))
+  background-color: rgb(229 9 20 / var(--tw-bg-opacity))
 }
 
 .bg-transparent {
@@ -878,7 +878,7 @@ button.swiper-pagination-bullet {
   transition-property: all;
   transition-duration: .3s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  border-radius: 9999px;
+  border-radius: 8px;
   padding: .25rem 1rem;
   font-size: 1rem;
   line-height: 1.5rem;
@@ -899,7 +899,7 @@ button.swiper-pagination-bullet {
   transition-property: all;
   transition-duration: .3s;
   transition-timing-function: cubic-bezier(.4,0,.2,1);
-  border-radius: 9999px;
+  border-radius: 8px;
   padding-left: 1rem;
   padding-right: 1rem;
   font-size: .875rem;
@@ -920,14 +920,14 @@ button.swiper-pagination-bullet {
 
 .btn-primary {
   --tw-bg-opacity: 1;
-  background-color: rgb(255 0 0 / var(--tw-bg-opacity));
-  --tw-shadow: 0 0 7px 8px rgba(255, 0, 0, .4);
+  background-color: rgb(229 9 20 / var(--tw-bg-opacity));
+  --tw-shadow: 0 0 7px 8px rgba(229, 9, 20, .4);
   --tw-shadow-colored: 0 0 7px 8px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
 }
 
 .btn-primary:hover {
-  --tw-shadow: 0 0 12px 14px rgba(255, 0, 0, .4);
+  --tw-shadow: 0 0 12px 14px rgba(229, 9, 20, .4);
   --tw-shadow-colored: 0 0 12px 14px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow)
 }
@@ -942,7 +942,7 @@ button.swiper-pagination-bullet {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
-  color: rgb(255 0 0 / var(--tw-text-opacity))
+  color: rgb(229 9 20 / var(--tw-text-opacity))
 }
 
 .spinner {

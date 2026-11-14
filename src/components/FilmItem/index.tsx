@@ -75,14 +75,14 @@ const FilmItem: React.FC<FilmItemProps> = ({
         <div className={cn('px-2 w-full mb-8', className)}>
             <div className="hover:cursor-pointer group z-10 relative" onClick={handleNavigate}>
                 <div
-                    className="relative w-full h-72 2xl:h-80 rounded-3xl bg-center bg-no-repeat bg-cover transition duration-300 group-hover:after:bg-black/60 animate-parallax"
+                    className="relative w-full h-72 2xl:h-80 rounded-lg bg-center bg-no-repeat bg-cover transition duration-300 group-hover:after:bg-black/60 animate-parallax"
                     style={{ backgroundImage: `url(${imageSrc})` }}
                 >
                     <img
                         src={imageSrc}
                         alt={title}
                         onError={handleImageError}
-                        className="absolute w-full h-full object-cover rounded-3xl"
+                        className="absolute w-full h-full object-cover rounded-lg"
                     />
 
                     {/* Heart icon for favorite functionality */}

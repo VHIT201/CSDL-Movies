@@ -81,7 +81,7 @@ const Header: React.FC = () => {
                                     onClick={toggleDropdown}
                                 />
                                 {isDropdownOpen && (
-                                    <div className="absolute right-0 mt-64 w-64 bg-white rounded-md shadow-lg py-2 z-50">
+                                    <div className="absolute right-0 mt-64 w-64 bg-white rounded-lg shadow-lg py-2 z-50">
                                         <NavLink
                                             to="/settings"
                                             className="flex items-center px-4 py-2 text-gray-800 hover:bg-gray-100"

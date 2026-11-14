@@ -37,7 +37,7 @@ export const Button: FC<ButtonProps> = ({
             <Link
                 className={cn(
                     'flex justify-center items-center',
-                    'rounded-full',
+                    'rounded-lg',
                     'transition-all duration-300',
                     'ease-in-out',
                     {
@@ -61,7 +61,7 @@ export const Button: FC<ButtonProps> = ({
         <button
             className={cn(
                 'flex justify-center items-center',
-                'rounded-full',
+                'rounded-lg',
                 'transition-all duration-300',
                 'ease-in-out',
                 {

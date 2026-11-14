@@ -47,8 +47,8 @@ const FilmList: React.FC<FilmListProps> = ({ filmList, isFetchingNextPage, hasNe
                 {/* Hiển thị skeleton khi đang tải thêm dữ liệu */}
                 {isFetchingNextPage &&
                     Array.from({ length: 6 }).map((_, index) => (
-                        <div key={index} className="w-full h-full rounded-rounded">
-                            <Skeleton className="animate-pulse" height={220} width="100%" borderRadius={20} />
+                        <div key={index} className="w-full h-full rounded-lg">
+                            <Skeleton className="animate-pulse" height={220} width="100%" borderRadius={8} />
                             <Skeleton className="animate-pulse" width="80%" style={{ marginTop: '8px' }} />
                         </div>
                     ))}

@@ -1,19 +1,23 @@
 import styled from 'styled-components';
+import { Images } from '../../../assets/images';
 
 interface SignInProps {
   signinIn?: boolean;
 }
 
 export const Container = styled.div`
-  background-color: rgba(0, 0, 0, 0.8); /* Nền màu đen mờ */
-  border-radius: 10px;
-  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25),
-              0 10px 10px rgba(0, 0, 0, 0.22);
+  background-color: rgba(12, 12, 12, 0.82);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.55),
+              0 0 0 1px rgba(0, 0, 0, 0.4);
   position: relative;
   overflow: hidden;
-  width: 780px;
+  width: 820px;
   max-width: 100%;
-  min-height: 500px;
+  min-height: 540px;
 `;
 
 export const SignUpContainer = styled.div.attrs<SignInProps>(
@@ -48,56 +52,76 @@ export const SignInContainer = styled.div<SignInProps>`
 `;
 
 export const Form = styled.form`
-  background-color: rgba(20, 20, 20, 0.9); /* Nền tối hơn và mờ hơn */
-  backdrop-filter: blur(5px); /* Hiệu ứng làm mờ nền */
+  background-color: #101010;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 0 50px;
+  padding: 0 64px;
   height: 100%;
   text-align: center;
 `;
 
 export const Title = styled.h1`
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: -0.02em;
   margin: 0;
-  color: #e0e0e0; /* Màu xám sáng */
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Thêm bóng cho chữ */
+  color: #ffffff;
+`;
+
+export const Subtitle = styled.p`
+  margin: 10px 0 26px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #9a9a9a;
 `;
 
 export const Input = styled.input`
-  background-color: #333333;
-  color: #e0e0e0;
-  border: 1px solid #555555;
-  padding: 12px 15px;
-  margin: 8px 0;
+  background-color: rgba(255, 255, 255, 0.06);
+  color: #f5f5f5;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 14px 22px;
+  margin: 7px 0;
   width: 100%;
-  border-radius: 25px; /* Bo tròn nhiều hơn */
-  font-size: 16px;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  &::placeholder {
+    color: #8c8c8c;
+  }
+  &:hover {
+    border-color: rgba(255, 255, 255, 0.28);
+  }
   &:focus {
-    border-color: #ff5252; /* Màu đỏ nhạt khi focus */
+    border-color: rgb(229, 9, 20);
+    background-color: rgba(255, 255, 255, 0.09);
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.25);
     outline: none;
   }
 `;
 
 export const Button = styled.button`
-  border-radius: 25px;
+  border-radius: 8px;
   border: none;
-  background-color: #ff5252; /* Màu đỏ nổi bật */
+  background: linear-gradient(135deg, rgb(229, 9, 20) 0%, rgb(166, 7, 15) 100%);
+  box-shadow: 0 10px 26px rgba(229, 9, 20, 0.35);
   color: #ffffff;
-  font-size: 14px;
-  font-weight: bold;
-  padding: 12px 45px;
-  letter-spacing: 1px;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 14px 48px;
+  margin-top: 18px;
+  letter-spacing: 1.5px;
   text-transform: uppercase;
-  transition: background-color 0.3s ease, transform 80ms ease-in;
+  transition: transform 0.15s ease, box-shadow 0.25s ease, filter 0.25s ease;
   cursor: pointer;
   &:hover {
-    background-color: #d32f2f; /* Màu đỏ đậm hơn khi hover */
+    filter: brightness(1.12);
+    box-shadow: 0 14px 32px rgba(229, 9, 20, 0.45);
+    transform: translateY(-1px);
   }
   &:active {
-    transform: scale(0.95);
+    transform: scale(0.97);
   }
   &:focus {
     outline: none;
@@ -105,22 +129,27 @@ export const Button = styled.button`
 `;
 
 export const GhostButton = styled(Button)`
-  background-color: transparent;
-  border: 2px solid #ff5252;
-  color: #ffffff;
+  background: transparent;
+  border: 1.5px solid rgba(255, 255, 255, 0.85);
+  box-shadow: none;
+  margin-top: 0;
   &:hover {
-    background-color: rgba(255, 82, 82, 0.1); /* Màu nền mờ khi hover */
+    background-color: #ffffff;
+    color: rgb(229, 9, 20);
+    filter: none;
+    box-shadow: none;
+    transform: translateY(-1px);
   }
 `;
 
 export const Anchor = styled.a`
-  color: #e0e0e0;
-  font-size: 14px;
+  color: #a8a8a8;
+  font-size: 13px;
   text-decoration: none;
-  margin: 15px 0;
-  transition: color 0.3s ease;
+  margin: 16px 0 4px;
+  transition: color 0.25s ease;
   &:hover {
-    color: #ff5252;
+    color: rgb(229, 9, 20);
   }
 `;
 
@@ -137,7 +166,9 @@ export const OverlayContainer = styled.div<SignInProps>`
 `;
 
 export const Overlay = styled.div<SignInProps>`
-  background: linear-gradient(to right, #b71c1c, #1a1a1a); /* Gradient từ đỏ đậm sang đen */
+  background:
+    linear-gradient(135deg, rgba(229, 9, 20, 0.88) 0%, rgba(166, 7, 15, 0.82) 48%, rgba(10, 10, 10, 0.92) 100%),
+    url(${Images.footerImg});
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -178,10 +209,10 @@ export const RightOverlayPanel = styled(OverlayPanel)<SignInProps>`
 `;
 
 export const Paragraph = styled.p`
-  font-size: 16px;
+  font-size: 15px;
   font-weight: 300;
-  line-height: 24px;
-  letter-spacing: 0.5px;
-  margin: 20px 0 30px;
-  color: #e0e0e0; /* Màu xám sáng */
+  line-height: 1.65;
+  letter-spacing: 0.4px;
+  margin: 18px 0 30px;
+  color: rgba(255, 255, 255, 0.78);
 `;

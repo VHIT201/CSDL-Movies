@@ -6,3 +6,4 @@ export const MediaPage = lazy(() => import('./Media/MediaPage'));
 export const LoginPage = lazy(() => import('./Authenticate/Login/Login'));
 export const SignUpPage = lazy(() => import('./Authenticate/SignUp/SignUp'));
 export const FavoriteListPage = lazy(() => import('./FavoriteList/FavoriteListPage'));
+export const AdminPage = lazy(() => import('./Admin/AdminPage'));

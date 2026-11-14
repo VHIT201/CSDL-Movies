@@ -10,7 +10,7 @@ function Authenticate() {
 
     // Function to handle admin login
     const handleAdminLogin = () => {
-        navigate('/home');
+        navigate('/admin');
     };
 
     const handleSignIn = (e: React.FormEvent<HTMLFormElement>) => {
@@ -39,9 +39,10 @@ function Authenticate() {
                     <Components.SignUpContainer signinIn={signIn}>
                         <Components.Form>
                             <Components.Title>Create Account</Components.Title>
-                            <Components.Input type="text" placeholder="Name" />
-                            <Components.Input type="email" placeholder="Email" />
-                            <Components.Input type="password" placeholder="Password" />
+                            <Components.Subtitle>Join theMovies and start watching</Components.Subtitle>
+                            <Components.Input type="text" placeholder="Name" autoComplete="name" />
+                            <Components.Input type="email" placeholder="Email" autoComplete="email" />
+                            <Components.Input type="password" placeholder="Password" autoComplete="new-password" />
                             <Components.Button>Sign Up</Components.Button>
                         </Components.Form>
                     </Components.SignUpContainer>
@@ -49,15 +50,18 @@ function Authenticate() {
                     <Components.SignInContainer signinIn={signIn}>
                         <Components.Form onSubmit={handleSignIn}>
                             <Components.Title>Sign in</Components.Title>
+                            <Components.Subtitle>Welcome back to theMovies</Components.Subtitle>
                             <Components.Input
                                 type="email"
                                 placeholder="Email"
+                                autoComplete="email"
                                 value={email}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmail(e.target.value)}
                             />
                             <Components.Input
                                 type="password"
                                 placeholder="Password"
+                                autoComplete="current-password"
                                 value={password}
                                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPassword(e.target.value)}
                             />

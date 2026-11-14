@@ -12,7 +12,7 @@ import MainLayout from './layouts/mainlayout/mainLayout';
 // Lazy loading pages
 
 
-import { HomePage, MediaPage, FilmDetailPage, FavoriteListPage } from './pages';
+import { HomePage, MediaPage, FilmDetailPage, FavoriteListPage, AdminPage } from './pages';
 
 const Authenticate = lazy(() => import("./pages/Authenticate/Authenticate"));
 
@@ -23,6 +23,7 @@ function App() {
                 <Suspense fallback={<Spinner />}>
                     <Routes>
                         <Route path="/" element={<Authenticate />} />
+                        <Route path="/admin" element={<AdminPage />} />
                         <Route element={<MainLayout />}>
                             <Route path="/home" element={<HomePage />} />
                             <Route path="/:media_type" element={<MediaPage />} />

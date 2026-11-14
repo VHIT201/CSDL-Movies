@@ -28,7 +28,7 @@ const MovieDetailBanner: React.FC<{
         <img
           src={`https://image.tmdb.org/t/p/w500${filmDetails.poster_path}`}
           alt={filmDetails.title}
-          className="w-full rounded-3xl"
+          className="w-full rounded-lg"
         />
       </div>
       <div className="px-4 flex-1 flex flex-col items-start justify-between -my-2 lg:-my-4">
@@ -38,7 +38,7 @@ const MovieDetailBanner: React.FC<{
         <div className="py-4 flex flex-wrap items-center -mx-1">
           {filmDetails.genres.map((genre) => (
             <div className="px-1 mb-4" key={genre.id}>
-              <span className="bg-black-main px-4 py-1 border-2 border-white rounded-full text-white text-xs lg:text-sm">
+              <span className="bg-black-main px-4 py-1 border-2 border-white rounded-lg text-white text-xs lg:text-sm">
                 {genre.name}
               </span>
             </div>
@@ -58,7 +58,7 @@ const MovieDetailBanner: React.FC<{
                       ? Config.imgPath + item.profile_path
                       : Images.default_image
                   }
-                  className="rounded-xl"
+                  className="rounded-lg"
                   alt={item.name}
                 />
                 <span className="text-white text-xs md:text-sm font-sm">
