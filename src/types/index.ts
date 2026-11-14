@@ -21,6 +21,8 @@ export type FilmType = {
     vote_count?: number;
 };
 
+export type Movie = FilmType;
+
 export type FilmResponseType = {
     backdrop_path?: string;
     original_title?: string;

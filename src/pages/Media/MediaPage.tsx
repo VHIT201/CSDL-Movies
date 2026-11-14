@@ -1,5 +1,5 @@
 // Core
-import React, { useMemo, useCallback } from 'react';
+import { useMemo, useCallback } from 'react';
 import { useSearchParams, useParams } from 'react-router-dom';
 import { useInfiniteQuery } from '@tanstack/react-query';
 import 'react-loading-skeleton/dist/skeleton.css';

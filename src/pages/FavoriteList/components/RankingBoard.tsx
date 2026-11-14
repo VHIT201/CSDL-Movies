@@ -1,4 +1,3 @@
-import React from 'react';
 import { StackWeekend } from './StackWeekend';
 
 const RankingBoard = () => {

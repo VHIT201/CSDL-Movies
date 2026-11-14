@@ -1,4 +1,4 @@
-import React, { useCallback, memo, useState, useEffect } from 'react';
+import React, { useCallback, memo, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import apiClient from '@/network/axios';
 import Config from '../../configuration';
@@ -9,10 +9,10 @@ import { useFavoriteStore } from '@/store/favoriteStore';
 
 export interface FilmItemProps extends ComponentProps {
     id: number;
-    original_title: string;
-    name: string;
-    original_name: string;
-    poster_path: string;
+    original_title?: string;
+    name?: string;
+    original_name?: string | null;
+    poster_path?: string | null;
     media_type: string;
 }
 
@@ -43,7 +43,7 @@ const FilmItem: React.FC<FilmItemProps> = ({
             const newFavoriteStatus = !isFilmFavorite;
     
             // Gửi yêu cầu đến API để cập nhật trạng thái yêu thích
-            const response = await apiClient.post('/account/21535262/favorite', {
+            await apiClient.post('/account/21535262/favorite', {
                 media_type: media_type,
                 media_id: id,
                 favorite: newFavoriteStatus,

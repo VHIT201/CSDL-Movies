@@ -1,20 +1,10 @@
-import React, { useEffect, useRef, useCallback } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-//Component
-import FilmSlide from "../../../../components/FilmSlide";
-
-//Config
-import Config from "../../../../configuration";
 
 //Types
 import { HeaderSwiperProps } from "./lib/Type";
 
-const HeaderSwiper: React.FC<HeaderSwiperProps> = ({
-  swipersData,
-  onWatchNow,
-  onWatchTrailer,
-}) => {
+const HeaderSwiper: React.FC<HeaderSwiperProps> = ({ swipersData }) => {
 
   return (
     <Swiper
@@ -23,7 +13,7 @@ const HeaderSwiper: React.FC<HeaderSwiperProps> = ({
       className="w-full mb-0 p-0"
       
     >
-      {swipersData[0].data.slice(0, 4).map((movie, index) => (
+      {swipersData[0].data.slice(0, 4).map((_, index) => (
         <SwiperSlide key={index}>
           
             

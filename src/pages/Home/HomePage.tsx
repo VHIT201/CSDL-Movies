@@ -34,7 +34,7 @@ const HomePage: React.FC = () => {
     const { data: topRatedTVFilmList } = useFilmQuery('top_rated', 'tv');
 
 // Lấy danh sách yêu thích phim (movie)
-const { data: favouriteMovieList } = useInfiniteQuery({
+useInfiniteQuery({
     queryKey: ['film', 'favorite', 'movie'],
     queryFn: async ({ pageParam = 1 }) => {
         const response = await getFavoriteMedia(MediaType.Movie, pageParam);
@@ -58,7 +58,7 @@ const { data: favouriteMovieList } = useInfiniteQuery({
 
 
 // Lấy danh sách yêu thích TV
-const { data: favouriteTVList } = useInfiniteQuery({
+useInfiniteQuery({
     queryKey: ['film', 'favorite', 'tv'],
     queryFn: async ({ pageParam = 1 }) => {
         const response = await getFavoriteMedia(MediaType.TV, pageParam);
@@ -79,9 +79,6 @@ const { data: favouriteTVList } = useInfiniteQuery({
     },
     initialPageParam: 1,
 });
-    
-
-console.log(useFavoriteStore.getState().favoriteList)
 
     
 

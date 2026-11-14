@@ -17,7 +17,7 @@ const Signup: React.FC = () => {
     }
     try {
       // Gọi hàm đăng ký của Firebase
-      const response = await createUserWithEmailAndPassword(auth, email, password);
+      await createUserWithEmailAndPassword(auth, email, password);
       // Lưu trữ token vào localStorage
       // localStorage.setItem('userToken', response.user.accessToken);
       setError(null);

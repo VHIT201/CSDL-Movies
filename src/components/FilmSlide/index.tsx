@@ -9,7 +9,6 @@ const FilmSlide: React.FC<FilmSlideProps> = ({
   posterImage,
   onWatchNow,
   onWatchTrailer,
-  media_type,
 }) => {
   const slideRef = useRef<HTMLDivElement | null>(null);
 

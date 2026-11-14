@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { Swiper, SwiperProps, SwiperSlide } from 'swiper/react';
-import { Autoplay, EffectCoverflow, Navigation, Pagination } from 'swiper/modules';
+import { Autoplay, EffectCoverflow, Pagination } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';

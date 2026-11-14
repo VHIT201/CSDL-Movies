@@ -2,7 +2,7 @@ import { Button } from '@/components';
 import { HeartFillIcon } from '@/components/Icon';
 import { ComponentProps } from '@/types';
 import { cn } from '@/utils';
-import React, { FC } from 'react';
+import { FC } from 'react';
 
 interface FavoriteCardProps extends ComponentProps {
     enable?: boolean;

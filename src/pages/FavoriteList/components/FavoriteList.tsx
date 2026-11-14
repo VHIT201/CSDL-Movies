@@ -1,4 +1,3 @@
-import React from 'react';
 import { FavoriteCard } from './FavoriteCard';
 
 const FavoriteList = () => {
